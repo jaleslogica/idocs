@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from idocsapp.views import index, proposta, empresa, download
+from idocsapp.views import index, proposta, empresa, download, produtos
 from idocsapp.views import detail
 from idocsapp.views import results
 from idocsapp.views import vote
@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^proposta/$', proposta, name="proposta"),
     url(r'^empresa/$', empresa, name="empresa"),
     url(r'^download/$', download, name="download"),
+    url(r'^produtos/$', produtos, name="produtos"),
 
     url(r'^(?P<question_id>[0-9]+)/$', detail, name='detail'),
     # ex: /polls/5/results/
