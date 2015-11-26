@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = (
     #'grappelli',
     'django.contrib.admin',
@@ -39,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'idocsapp',
+    'geoposition', #app que permiti colocar um mapa no admin
 
 )
 
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'idocs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'idocsapp/../idocsapp/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,3 +110,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'idocsapp/static'),
 )
+
+#Possibilitar o zoom no mapa
+GEOPOSITION_MAP_OPTIONS = {
+    'minZoom': 15,
+    'maxZoom': 18,
+}

@@ -141,6 +141,11 @@
       <column name="contato_favorito" sqlType="BOOL" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="contato_email" sqlType="VARCHAR(100)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="contato_tel" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="contato_bairro" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="contato_cidade" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="contato_endereco" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="contato_estado" sqlType="VARCHAR(2)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="contato_position" sqlType="VARCHAR(42)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="idocsapp_question" schema="" catalog="" type="TABLE">
